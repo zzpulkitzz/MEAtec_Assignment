@@ -278,7 +278,7 @@ Authorization: Bearer <your-jwt-token>
 
 
 
-**Response (200 OK):**
+**Response (200 OK):** 
 {
 "habit": {
 "id": 1,
@@ -553,7 +553,7 @@ When rate limit is exceeded, you'll receive:
 
 ## Author
 
-Pulkit Agarwal - [gpulkitgupta72@gmail.com]
+Pulkit Gupta - [gpulkitgupta72@gmail.com]
 
 ## License
 
