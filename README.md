@@ -73,7 +73,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository:**
 
-git clone https://github.com/zzpulkitzz/MEAtec_Assignment.git
+git clone https://github.com/zzpulkitzz/MEAtec_Assignment.git  
 cd MEAtec_Assignment
 
 2. **Install dependencies:**
