@@ -84,21 +84,21 @@ npm install
 npm install --save-dev typescript ts-node @types/node @types/express
 ---
 
-## Environment Variables
+## Environment Variables  
 
-Create a `.env` file in the root directory with the following variables:
+Create a `.env` file in the root directory with the following variables:  
 
-Database (You must have a postgresql server running.)
-DATABASE_URL="postgresql://username:password@localhost:5432/habit_tracker"
+Database (You must have a postgresql server running.)  
+DATABASE_URL="postgresql://username:password@localhost:5432/habit_tracker"  
 
-JWT Secret (You can generate a random string using online tools.)
-JWT_SECRET="your_super_secret_jwt_key_here"
+JWT Secret (You can generate a random string using online tools.)  
+JWT_SECRET="your_super_secret_jwt_key_here"  
 
-Server Port (You can change this to any port you prefer.)
-PORT=3000
+Server Port (You can change this to any port you prefer.)  
+PORT=3000  
 
-Node Environment
-NODE_ENV=development
+Node Environment  
+NODE_ENV=development  
 
 ## Database Setup
 
