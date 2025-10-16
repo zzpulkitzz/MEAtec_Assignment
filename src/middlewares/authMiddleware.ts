@@ -25,14 +25,12 @@ export const authenticateToken = (
 ): void => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
-  console.log(token)
   if (!token) {
     res.status(401).json({ error: 'Access denied. No token provided' });
     return;
   }
 
   try {
-    console.log(JWT_SECRET)
     const payload = jwt.verify(token, JWT_SECRET) as JwtPayload;
     req.user = payload;
     next();
