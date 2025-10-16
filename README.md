@@ -1,4 +1,4 @@
-# Habit Tracker API
+# Habit Tracker API (Assignment Project)
 
 A RESTful API for personal habit tracking and streak management built with Node.js, Express, TypeScript, PostgreSQL, and Prisma ORM.
 
