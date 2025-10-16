@@ -1,0 +1,47 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String    @unique
+  password  String
+  habits    Habit[]
+  createdAt DateTime  @default(now())
+}
+
+model Habit {
+  id             Int         @id @default(autoincrement())
+  title          String
+  description    String?
+  frequency      Frequency   // Enum: DAILY | WEEKLY
+  user           User        @relation(fields: [userId], references: [id])
+  userId         Int
+  logs           HabitLog[]
+  tags           String[]    // Postgres supports array columns
+  reminderTime   String?     // Store as 'HH:mm' or ISO 8601 time string
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+model HabitLog {
+  id        Int       @id @default(autoincrement())
+  habit     Habit     @relation(fields: [habitId], references: [id])
+  habitId   Int
+  date      DateTime  // one log per day per habit per user
+  completed Boolean   @default(true)
+  createdAt DateTime  @default(now())
+
+  @@unique([habitId, date]) // Only one entry per habit per day
+}
+
+enum Frequency {
+  DAILY
+  WEEKLY
+}
