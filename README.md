@@ -102,11 +102,11 @@ NODE_ENV=development
 
 ## Database Setup
 
-1. **Create PostgreSQL database:** (You may skip this if you already have a postgres database ready and have a connection string for it.)
-psql -U postgres
-CREATE DATABASE habit_tracker;
-CREATE USER your_username WITH ENCRYPTED PASSWORD 'your_password';
-GRANT ALL PRIVILEGES ON DATABASE habit_tracker TO your_username;
+1. **Create PostgreSQL database:** (You may skip this if you already have a postgres database ready and have a connection string for it.)  
+psql -U postgres  
+CREATE DATABASE habit_tracker;  
+CREATE USER your_username WITH ENCRYPTED PASSWORD 'your_password';  
+GRANT ALL PRIVILEGES ON DATABASE habit_tracker TO your_username;  
 \q
 
 2. **Initialize Prisma:**
